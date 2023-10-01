@@ -62,7 +62,7 @@
     <section>
       <div class="container">
         <div id="musik">
-          <h2><a href="materi.html">MULAI BELAJAR</a></h2>
+          <h2><a href="materi/materi.html">MULAI BELAJAR</a></h2>
         </div>
         <audio id="soundtractk">
           <source src="musik/audio4.mp3" />
@@ -74,25 +74,22 @@
       </div>
     </section>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const soundtractk = document.getElementById("soundtractk");
-        const musik = document.getElementById("musik");
-        const sound1 = document.getElementById("sound1");
-        let isPlaying = false;
+      // const soundtractk = document.getElementById("soundtractk");
+      // const musik = document.getElementById("musik");
 
-        musik.addEventListener("click", function () {
-          if (!isPlaying) {
-            soundtractk.play();
-            isPlaying = true;
-          }
-        });
+      // musik.addEventListener("click", function () {
+      //   soundtractk.play();
+      // });
 
-        sound1.addEventListener("click", function () {
-          if (isPlaying) {
-            soundtractk.pause();
-            isPlaying = false;
-          }
-        });
+      const soundtrack = document.getElementById("soundtrack");
+      const musik = document.getElementById("musik");
+
+      musik.addEventListener("click", function () {
+        if (soundtrack.paused) {
+          soundtrack.play();
+        } else {
+          soundtrack.pause();
+        }
       });
     </script>
   </body>
