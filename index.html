@@ -73,6 +73,27 @@
         </div>
       </div>
     </section>
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backsound = document.getElementById("backsound");
+        const sound = document.getElementById("sound");
+        const sound1 = document.getElementById("sound1");
+        let isPlaying = false;
+
+        sound.addEventListener("click", function () {
+          if (!isPlaying) {
+            backsound.play();
+            isPlaying = true;
+          }
+        });
+
+        sound1.addEventListener("click", function () {
+          if (isPlaying) {
+            backsound.pause();
+            isPlaying = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
