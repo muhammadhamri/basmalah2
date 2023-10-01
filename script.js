@@ -5,9 +5,9 @@
 //   soundtractk.play();
 // });
 
-const soundtractk = document.getElementById("soundtractk");
+const sound = document.getElementById("sound");
 const musik = document.getElementById("musik");
 
 musik.addEventListener("click", function () {
-  soundtractk.play();
+  sound.play();
 });
